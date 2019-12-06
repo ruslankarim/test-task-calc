@@ -9,9 +9,9 @@ public class Main {
         String str = in.nextLine();
         String [] parts = str.split(" ");
         int[] arr = new ParseStr().parse(parts);
-        int res = new Calculate().calculate(arr, parts[1]);
+        int res = new Calculate().execute(arr, parts[1]);
         if (ParseStr.isRoman){
-            String string = new ConvertNums().inverseConvert(res);
+            String string = new ConvertNums().inverseExecute(res);
             System.out.println(string);
         }else {
             System.out.println(res);

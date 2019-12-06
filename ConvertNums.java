@@ -55,16 +55,15 @@ class ConvertNums {
         }
     }
 
-    String inverseConvert(int n){
-        String roman = "";
+    String inverseExecute(int n){
+
         if (n <= 0){
-            return roman = "В римской системе счисления отсутствует ноль и отрицательные числа";
+            return "В римской системе счисления отсутствуют ноль и отрицательные числа";
         }
         Map<Integer, String> hashMap = ConvertNums.createMapRoman();
         int i = numbers.length - 1;
         StringBuilder sb = new StringBuilder();
-        while ((n > 0) && (i < hashMap.size())) {
-
+        while ((n > 0)) {
             if(numbers[i] <= n){
                 sb.append(hashMap.get(numbers[i]));
                 n -= numbers[i];

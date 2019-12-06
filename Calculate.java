@@ -1,7 +1,7 @@
 package com.company.ruslan_karimov;
 
-public class Calculate {
-    int calculate (int[] arr, String operator) throws IllegalArgumentException {
+ class Calculate {
+    int execute(int[] arr, String operator) throws IllegalArgumentException {
         int result = 0;
         switch (operator) {
             case ("+"):

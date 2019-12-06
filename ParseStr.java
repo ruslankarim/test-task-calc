@@ -4,7 +4,7 @@ package com.company.ruslan_karimov;
  class ParseStr {
     private int n1;
     private  int n2;
-    public static boolean isRoman = false;
+    static boolean isRoman = false;
 
     int[] parse (String[]parts) throws NumberFormatException {
 
@@ -21,14 +21,14 @@ package com.company.ruslan_karimov;
         }else if(!isRomanN1 && isRomanN2 || !isDigitN1 && isDigitN2){
             throw new  NumberFormatException();
         }else if(isRomanN1 && isRomanN2) {
-            this.isRoman = true;
+            ParseStr.isRoman = true;
             this.n1 = converted1;
             this.n2 = converted2;
         }else{
             this.n1 = Integer.parseInt(parts[0]);
             this.n2 = Integer.parseInt(parts[2]);
-
         }
+
         int [] arr = {this.n1, this.n2};
 
         return arr;
@@ -45,7 +45,6 @@ package com.company.ruslan_karimov;
      }
 
      private boolean isRoman (String str, int converted) {
-
          boolean isRoman = false;
          if (converted > 0) {
              isRoman = true;
